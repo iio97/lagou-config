@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: lagou-service-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lagou?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    username: root
+    password: root
+  jpa:
+    database: MySQL
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl  #避免将驼峰命名转换为下划线命名
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #所有的接口
+  # 暴露健康接口的细节
+  endpoint:
+    health:
+      show-details: always
