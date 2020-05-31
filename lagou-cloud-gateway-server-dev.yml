@@ -47,3 +47,7 @@ management:
   endpoint:
     health:
       show-details: always
+
+lagou:
+  times: 10
+  second: 3
