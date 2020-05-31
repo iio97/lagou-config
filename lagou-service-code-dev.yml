@@ -1,8 +1,8 @@
 server:
-  port: 8082
+  port: 8081
 spring:
   application:
-    name: lagou-service-email
+    name: lagou-service-code
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/lagou?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
@@ -14,17 +14,7 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl  #避免将驼峰命名转换为下划线命名
-  mail:
-    host: smtp.163.com
-    username: zhulongqiu123@163.com
-    password: VBQZKZNTTJRZNEKF
-    default-encoding: UTF-8
-    port: 25
-    properties:
-      mail:
-        smtp:
-          auth: true
-          required: true
+
 management:
   endpoints:
     web:
